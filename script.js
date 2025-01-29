@@ -25,7 +25,7 @@ let computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
     // your code here!
-    
+
     if (humanChoice == "scissor" && computerChoice == "paper") {
         console.log("Scissor Beats paper! You Won The Game");
         humanScore++;
@@ -70,26 +70,54 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-function playGame(){
-    for (let i = 0; i < 5; i++){
-        let humanSelection = getHumanChoice();
-        humanSelection = humanSelection.toLowerCase();
-        let computerSelection = getComputerChoice();
-        console.log("Round " + (i + 1) + ":")
-        console.log("Computer Choicer: " + computerSelection);
-        console.log("Human Choice: " + humanSelection);
-        const result = playRound(humanSelection,computerSelection)
-        console.log("User Score: " + humanScore)
-        console.log("Computer Score: " + computerScore)
-        console.log(result)
-        console.log("-----------------------------------")
-        }
+function playGame() {
+    let humanSelection1 = getHumanChoice().toLowerCase();
+    let computerSelection1 = getComputerChoice();
+    console.log("Round 1:");
+    console.log("Computer Choice: " + computerSelection1);
+    console.log("Human Choice: " + humanSelection1);
+    playRound(humanSelection1, computerSelection1);
+    console.log("-----------------------------------");
 
-        if (humanScore> computerScore) {
-            console.log("User win the game")
-        } else if (humanScore < computerScore) {
-            console.log("Computer win the game")
-        } else {
-            console.log("Tie !")
-        }   
-} playGame()
+    let humanSelection2 = getHumanChoice().toLowerCase();
+    let computerSelection2 = getComputerChoice();
+    console.log("Round 2:");
+    console.log("Computer Choice: " + computerSelection2);
+    console.log("Human Choice: " + humanSelection2);
+    playRound(humanSelection2, computerSelection2);
+    console.log("-----------------------------------");
+
+    let humanSelection3 = getHumanChoice().toLowerCase();
+    let computerSelection3 = getComputerChoice();
+    console.log("Round 3:");
+    console.log("Computer Choice: " + computerSelection3);
+    console.log("Human Choice: " + humanSelection3);
+    playRound(humanSelection3, computerSelection3);
+    console.log("-----------------------------------");
+
+    let humanSelection4 = getHumanChoice().toLowerCase();
+    let computerSelection4 = getComputerChoice();
+    console.log("Round 4:");
+    console.log("Computer Choice: " + computerSelection4);
+    console.log("Human Choice: " + humanSelection4);
+    playRound(humanSelection4, computerSelection4);
+    console.log("-----------------------------------");
+
+    let humanSelection5 = getHumanChoice().toLowerCase();
+    let computerSelection5 = getComputerChoice();
+    console.log("Round 5:");
+    console.log("Computer Choice: " + computerSelection5);
+    console.log("Human Choice: " + humanSelection5);
+    playRound(humanSelection5, computerSelection5);
+    console.log("-----------------------------------");
+
+    if (humanScore > computerScore) {
+        console.log("User wins the game!");
+    } else if (humanScore < computerScore) {
+        console.log("Computer wins the game!");
+    } else {
+        console.log("It's a tie!");
+    }
+}
+
+playGame();
